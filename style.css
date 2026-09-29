@@ -1,0 +1,114 @@
+:root{
+    --Green-500: hsl(158, 36%, 37%);
+    --Green-700: hsl(158, 42%, 18%);
+
+    --Black: hsl(212, 21%, 14%);
+    --Grey: hsl(228, 12%, 48%);
+    --Cream: hsl(30, 38%, 92%);
+    --White: hsl(0, 0%, 100%);
+
+    --font-text:"Montserrat", sans-serif;
+    --font-heading:"Fraunces", serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    color: var(--Grey);
+    font-family:var(--font-text) ;
+    background-color: var(--Cream);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-weight: 500;
+
+}
+.contaner{
+    margin: 30px;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    max-width:470px;
+    width: 90%;
+    border-radius: 10px;
+    overflow: hidden;/* to make border redius {without it not work}*/
+}
+.content{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    background-color: var(--White);
+}
+.img-card img{
+    max-width: 100%; 
+    display: block;
+    
+}
+
+.product-name{
+ text-transform: uppercase;
+ letter-spacing: 4px;
+}
+.content h1{
+    font-family: var(--font-heading);
+    color: var(--Black);
+    font-weight: 700;
+}
+.product-des{
+    line-height: 1.5;
+}
+.price{
+    display: flex;
+    gap: 20px;
+    font-family: var(--font-heading);
+    align-items: center;
+  
+}
+.price h2{
+    color: var(--Green-500);
+      font-weight: 700;
+      font-size: 40px;
+}
+.price p{
+    text-decoration: line-through;
+}
+.content button{
+    background-color: var(--Green-500);
+    padding: 15px 0;
+    border-radius: 8px;
+    border: none;
+    font-family: var(--font-text);
+    font-weight: 700;
+    color: var(--White);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+.content button:hover{
+    background-color: var(--Green-700);
+}
+@media (min-width: 600px) {
+    .card{
+        flex-direction: row;
+
+    }
+    .img-card img {
+    height: 100%;
+    object-fit: cover; /* لضمان ضبط الصورة بدون تمطيط */
+  }
+  .card{
+    max-width:700px;
+}
+.img-card ,.content{
+    width: 50%;
+}
+}
